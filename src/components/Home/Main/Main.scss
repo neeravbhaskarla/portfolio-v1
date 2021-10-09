@@ -1,0 +1,78 @@
+.main{
+    box-sizing: border-box;
+    &-container{
+        display: flex;
+        flex-direction: row;
+        height: 90vh;
+    }
+    &-left{
+        width: 60%;
+        padding-top: 180px;
+        padding-left: 150px;
+        animation: fromLeft 2s;
+        &-roles{
+            color: #636363;
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        &-name{
+            color: #303030;
+            &-first, &-last{
+                padding: 0;
+                margin: 0;
+                &>span{
+                    font-size: 5.2rem;
+                    font-weight: 500;
+                }
+            }
+            &-last{
+                margin-top: -14px;
+            }
+        }
+    }
+    &-right{
+        width: 50%;
+        margin-top: 12px;
+        margin-right: 150px;
+    }
+}
+@keyframes fromLeft {
+    from {
+        transform: translate(-100%,0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0%,0);
+        opacity: 1;
+    }
+  }
+  @keyframes fromRight {
+    from {
+        transform: translate(150%,0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0%,0);
+        opacity: 1;
+    }
+  }
+  @keyframes fromDown {
+    from {
+        transform: translate(0,100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0%,0);
+        opacity: 1;
+    }
+  }
+  @keyframes visibleOp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
