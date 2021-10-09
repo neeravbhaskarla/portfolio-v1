@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import React, { Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Environment, useGLTF, ContactShadows } from '@react-three/drei'
+import { isMobile } from 'react-device-detect'
 import { useSpring } from '@react-spring/core'
 import { a as three } from '@react-spring/three'
 import { a as web } from '@react-spring/web'
@@ -57,7 +58,7 @@ export default function Model() {
   
   const props = useSpring({ open: Number(open) })
   return (
-    <web.main style={{position: 'relative', height: 520}}>
+    <web.main style={{position: 'relative', height: isMobile? 320: 520}}>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 15, -28], fov: 35 }}>
         <three.pointLight position={[10, 10, 10]} intensity={1.5} />
         <Suspense fallback={null}>

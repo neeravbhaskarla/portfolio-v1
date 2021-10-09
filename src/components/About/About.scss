@@ -1,0 +1,18 @@
+.about{
+    margin: 600px 0px 100px 100px;
+    &-heading{
+        &>span{
+            font-size: 4rem;
+            font-weight: 400;
+        }
+    }
+    &-info{
+        margin-top: 50px;
+        width: 80%;
+        height: 250px;
+        &>span{
+            letter-spacing: 0.1em;
+            font-size: 1rem;
+        }
+    }
+}

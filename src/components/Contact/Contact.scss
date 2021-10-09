@@ -31,7 +31,7 @@
                 .contact-mail{
                     &>span{
                         color: rgb(160, 160, 160);
-                        font-weight: 800;
+                        font-weight: 600;
                     }
                 }
                 .contact-mailId{
@@ -39,7 +39,7 @@
                     a{
                         color: rgb(124, 124, 124);
                         font-size: 0.8rem;
-                        font-weight: 500;
+                        font-weight: 400;
                     }
                 }
             }
@@ -54,9 +54,9 @@
         align-items: center;
         .copyright{
             &>span{
-                font-weight: 600;
+                font-weight: 400;
                 margin-left: 20px;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 color: rgb(141, 141, 141);
             }
         }

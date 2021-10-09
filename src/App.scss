@@ -1,8 +1,19 @@
-.App{
-  .Home{
-      background-color: white;
-  }
-  .allProjects{
-      background-color: #F3F3F3;
-  }
+.construction{
+    display: flex;
+    flex-direction: column;
+    &-title{
+        margin-left: 20px;
+        &>span{
+            font-size: 2rem;
+            font-weight: 800;
+        }
+    }
+    &-detail{
+        margin-left: 20px;
+        margin-top: 10px;
+        &>span{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
 }
