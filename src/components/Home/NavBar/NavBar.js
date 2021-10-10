@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar.scss'
-export default function NavBar(props) {
+export default function NavBar() {
     return (
         <div className='navbar'>
             <div className="navbar-container">
@@ -9,17 +9,17 @@ export default function NavBar(props) {
                         <span>NB</span>
                     </div>
                 </div>
-                <div className="navbar-right">
-                    <div className="navbar-right-projects" onClick={()=>props.scrollToProjects()}>
-                        <span>Projects</span>
+                {/* <div className="navbar-right">
+                    <div className="navbar-right-projects">
+                        <a href="#projects-container">Projects</a>
                     </div>
-                    <div className="navbar-right-about" onClick={()=>props.scrollToAbout()}>
-                        <span>About Me</span>
+                    <div className="navbar-right-about">
+                        <a href="#about-container">About Me</a>
                     </div>
-                    <div className="navbar-right-contact" onClick={()=>props.scrollToContact()}>
-                        <span>Contact</span>
+                    <div className="navbar-right-contact">
+                        <a href="#contact-container">Contact</a>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import NavBar from './Home/NavBar/NavBar'
 import Projects from './Projects/Projects'
 import './MainPage.scss'
 import useLocoScroll from '../hooks/useLocoScroll'
+import { Suspense } from 'react/cjs/react.production.min'
 
 const LoaderComponent = () =>{
   const [counter, setCounter] = useState(0)
@@ -67,6 +68,7 @@ export default function MainPage() {
   return (
     <>
       {preloader?<LoaderComponent/>:
+      <Suspense fallback={null}>
             <div 
               id="main-container" 
               data-scroll-container
@@ -77,6 +79,7 @@ export default function MainPage() {
                   <About/>
                   <Contact/>
             </div>
+      </Suspense>
       }
     </>
   )
