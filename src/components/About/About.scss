@@ -1,18 +1,38 @@
 .about{
-    margin: 600px 0px 100px 100px;
+    height: 100vh;
+    margin: 200px 0px 0px 100px;
     &-heading{
+        opacity: 0;
+        clip-path: inset(100% 0% 0% 0%);
+        transform: translateY(100%);
+        transition: all 1s cubic-bezier(0.77, 0, 0.175, 1),;
         &>span{
             font-size: 4rem;
-            font-weight: 400;
+            font-weight: 500;
+        }
+        &.is-reveal{
+            opacity: 1;
+            transform: translateY(0%);
+            clip-path: inset(0% 0% 0% 0%);
         }
     }
     &-info{
         margin-top: 50px;
         width: 80%;
         height: 250px;
+        opacity: 0;
+        clip-path: inset(100% 0% 0% 0%);
+        transform: translateY(100%);
+        transition: all 1s cubic-bezier(0.77, 0, 0.175, 1),;
         &>span{
             letter-spacing: 0.1em;
             font-size: 1rem;
+        }
+
+        &.is-reveal{
+            opacity: 1;
+            transform: translateY(0%);
+            clip-path: inset(0% 0% 0% 0%);
         }
     }
 }

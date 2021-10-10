@@ -8,7 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: none;
+  font-smooth: always;
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar{
   display: none;

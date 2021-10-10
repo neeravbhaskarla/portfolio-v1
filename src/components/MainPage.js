@@ -1,72 +1,83 @@
-import React, { useRef } from 'react'
-import {Parallax, ParallaxLayer} from '@react-spring/parallax'
-import Project1 from './Projects/Project1/Project1'
-import Project2 from './Projects/Project2/Project2'
-import OtherProjects from './Projects/OtherProjects/OtherProjects'
+import React, {useEffect, useRef, useState} from 'react'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Home from './Home/Home'
+import NavBar from './Home/NavBar/NavBar'
+import Projects from './Projects/Projects'
+import './MainPage.scss'
+import useLocoScroll from '../hooks/useLocoScroll'
 
-
+const LoaderComponent = () =>{
+  const [counter, setCounter] = useState(0)
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+                    if(counter!==100){
+                      setCounter(counter+1)
+                    }
+                  },28)
+    return ()=> clearTimeout(timer)
+  },[counter])
+  return(
+    <div className="loader-component">
+      <h1>{counter}</h1>
+    </div>
+  )
+}
 
 export default function MainPage() {
-  const scrollToProjects = () =>{
-    parallax.current.scrollTo(1)
+  const ref = useRef(null);
+  const [preloader, setPreload] = useState(true);
+
+
+  useLocoScroll(!preloader);
+
+  useEffect(() => {
+    if (!preloader && ref) {
+      if (typeof window === "undefined" || !window.document) {
+        return;
+      }
+    }
+  }, [preloader]);
+
+  const [timer, setTimer] = useState(4);
+
+  const id = useRef(null);
+
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreload(false);
+  };
+
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((time) => time - 1);
+    }, 1000);
+    return () => clear();
+  }, []);
+
+  useEffect(() => {
+    if (timer === 0) {
+      clear();
+    }
+  }, [timer]);
+
+  if (typeof window === "undefined" || !window.document) {
+    return null;
   }
-  const scrollToAbout = () =>{
-    parallax.current.scrollTo(3.2)
-  }
-  const scrollToContact = () =>{
-    parallax.current.scrollTo(5)
-  }
-  const parallax = useRef(!null)
   return (
-      <Parallax ref={parallax} pages={5} style={{ top: '0', left: '0' }}>
-        <ParallaxLayer
-          offset={0}
-          speed={1}
-          >
-            <Home scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout} scrollToContact={scrollToContact}/>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={1} style={{ 
-          backgroundColor: '#f8f8f8',
-          height: '400vh' 
-        }} />
-        <ParallaxLayer
-          offset={1}
-          speed={1.4}
-          >
-            <Project1/>
-        </ParallaxLayer>
-        
-        <ParallaxLayer
-          offset={1.5}
-          speed={1}
-          >
-            <Project2/>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={1.5}
-          speed={1}
-          >
-            <OtherProjects/>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3}
-          speed={1}
-        >
-          <About/>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={4.74}
-          speed={1}
-        >
-          <Contact/>
-        </ParallaxLayer>
-    </Parallax>
+    <>
+      {preloader?<LoaderComponent/>:
+            <div 
+              id="main-container" 
+              data-scroll-container
+              ref={ref}>
+                  <NavBar/>
+                  <Home/>
+                  <Projects/>
+                  <About/>
+                  <Contact/>
+            </div>
+      }
+    </>
   )
 }

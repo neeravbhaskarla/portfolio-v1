@@ -2,13 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Progress from './components/Progress/Progress';
-
 
 ReactDOM.render(
-  <React.Suspense fallback={null}>
-    <Progress/>
-    <App />
-  </React.Suspense>,
+    <App />,
   document.getElementById('root')
 );

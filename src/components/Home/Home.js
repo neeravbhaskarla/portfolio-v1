@@ -1,11 +1,9 @@
 import React from 'react'
-import NavBar from './NavBar/NavBar'
 import Main from './Main/Main'
 
-export default function Home(props) {
+export default function Home() {
     return (
-        <div className="home-container">
-            <NavBar {...props}/>
+        <div className="home-container" data-scroll-container>
             <Main/>
         </div>
     )

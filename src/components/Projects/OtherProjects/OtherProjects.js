@@ -1,30 +1,54 @@
-import React from 'react'
+import React, { useRef} from 'react'
+import useOnScreen from '../../../hooks/useOnScreen'
+import cn from 'classname'
 import DashboardImg from '../../../assets/Images/DashboardImg.png'
 import CardekoImg from '../../../assets/Images/cardekoImg.png'
 import CRUDTable from '../../../assets/Images/CRUDtable.png'
 import './OtherProjects.scss'
 
 export default function OtherProjects() {
+    const ref = useRef(null);
+
+    const onScreen = useOnScreen(ref, 0.5);
+
     return (
         <div className="otherprojects">
-            <div className="otherprojects-heading">
-                <span>O T H E R</span>
-                <span>P R O J E C T S</span>
+                <div className={cn("projects-item-wrapper", { "is-reveal": onScreen })}
+                    ref={ref}>
+                    <div className="otherprojects-wrapper">
+                        <div className="otherprojects-name1">
+                            <h6>Interactive</h6>
+                            <span>Dashboard</span>
+                        </div>
+                        <div className="otherprojects-image1">
+                            <img src={DashboardImg} alt="" className="image1" data-scroll/>
+                        </div>
+                    </div>
+                </div>
+                <div className={cn("projects-item-wrapper", { "is-reveal": onScreen })}
+                    ref={ref}>
+                    <div className="otherprojects-wrapper">
+                        <div className="otherprojects-name2">
+                            <h6>Cardekho</h6>
+                            <span>Clone</span>
+                        </div>
+                        <div className="otherprojects-image2">
+                            <img src={CardekoImg} alt="" className="image2" data-scroll/>
+                        </div>
+                    </div>
+                </div>
+                <div className={cn("projects-item-wrapper", { "is-reveal": onScreen })}
+                    ref={ref}>
+                    <div className="otherprojects-wrapper">
+                        <div className="otherprojects-name3">
+                            <h6>CRUD</h6>
+                            <span>Table</span>
+                        </div>
+                        <div className="otherprojects-image3">
+                            <img src={CRUDTable} alt="" className="image3" data-scroll/>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="otherprojects-projects">
-                <div className="otherprojects-projects-dashboard">
-                    <img src={DashboardImg} alt="" className="dashboard-image"/>
-                    <span>Interactive Dashboard</span>
-                </div>
-                <div className="otherprojects-projects-cardeko">
-                    <img src={CardekoImg} alt="" className='cardeko-image'/>
-                    <span>Cardekho Clone</span>
-                </div>
-                <div className="otherprojects-projects-crud">
-                    <img src={CRUDTable} alt="" className='crud-image'/>
-                    <span>CRUD Table</span>
-                </div>
-            </div>
-        </div>
     )
 }

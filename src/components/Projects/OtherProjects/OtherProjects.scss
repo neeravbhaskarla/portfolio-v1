@@ -1,114 +1,116 @@
 .otherprojects{
-    border-top: 1px solid #ccc;
-    position: relative;
-    top: 250%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 40px;
-    &-heading{
         display: flex;
-        flex-direction: column;
-        font-weight: 800;
-        margin-left: 40px;
-        font-size: 2rem;
+        width: 300vw;
+        height: 100%;
+        justify-content: center;
+        img{
+            transform: scale(1);
+            transition: transform 1s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    &-wrapper{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: flex-end;
     }
-    &-projects{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 40%;
-        &-dashboard{
-            margin: 120px 0px 100px 250px;
-            &>img{
-                position: absolute;
-                border-radius: 10px;
-                height: 280px;
-                width: 490px;
-                left: 10%;
-                top: 50%;
-            }
-            .dashboard-image{
-                opacity: 0;
-                transform: translateX(-50%);
-                visibility: hidden;
-                transition: 0.8s;
-            }
-            &>span{
-                font-size: 3rem;
-                font-weight:  600;
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-            &:hover .dashboard-image{
-                opacity: 1;
-                transform: translateX(0%);
-                visibility: visible;
-            }
+    &-name1{
+        z-index: 1;
+        position: absolute;
+        top: 44%;
+        left: 20%;
+        &>h6{
+            font-size: 5.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: rgb(192, 192, 192);
 
         }
-        &-cardeko{
-            margin-left: 250px;
-            margin-bottom: 100px;
-            &>span{
-                margin-bottom: 14px;
-                font-size: 3rem;
-                font-weight: 600;
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-            .cardeko-image{
-                opacity: 0;
-                transform: translateX(-50%);
-                visibility: hidden;
-                transition: 0.8s;
-            }
-            &>img{
-                position: absolute;
-                border-radius: 10px;
-                height: 600px;
-                width: 360px;
-                left: 18%;
-                top: 28%;
-            }
-            &:hover .cardeko-image{
-                opacity: 1;
-                transform: translateX(0%);
-                visibility: visible;
-            }
+        &>span{
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(163, 163, 163);
         }
-        &-crud{
-            margin-left: 250px;
-            &>img{
-                visibility: hidden;
-                position: absolute;
-                border-radius: 10px;
-                height: 280px;
-                width: 490px;
-                left: 10%;
-                top: 50%;
-            }
-            .crud-image{
-                opacity: 0;
-                transform: translateX(-50%);
-                visibility: hidden;
-                transition: 0.8s;
-            }
-            &>span{
-                margin-top: 14px;
-                font-size: 3rem;
-                font-weight: 600;
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-            &:hover .crud-image{
-                opacity: 1;
-                transform: translateX(0%);
-                visibility: visible;
-            }
+    }
+    &-name2{
+        z-index: 1;
+        position: absolute;
+        top: 44%;
+        left: 42%;
+        &>h6{
+            font-size: 5.6rem;
+            font-weight: 600;
+            color: rgb(192, 192, 192);
+
+        }
+        &>span{
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(163, 163, 163);
+        }
+    }
+    &-name3{
+        z-index: 1;
+        position: absolute;
+        top: 44%;
+        left: 34%;
+        &>h6{
+            font-size: 5.6rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: rgb(192, 192, 192);
+
+        }
+        &>span{
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(163, 163, 163);
+        }
+    }
+    &-image1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+        img{
+            width: 100%;
+            height: 62vh !important;
+        }
+    }
+    &-image2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+        img{
+            width: 75%;
+            height: 80vh !important;
+            margin-right: 150px;
+        }
+    }
+    &-image3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+        margin-right: 30px;
+        img{
+            width: 90%;
+            height: 58vh !important;
         }
     }
 }

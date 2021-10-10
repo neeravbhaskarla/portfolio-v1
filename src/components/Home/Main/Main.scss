@@ -1,5 +1,4 @@
 .main{
-    box-sizing: border-box;
     &-container{
         display: flex;
         flex-direction: row;
@@ -45,34 +44,6 @@
     }
     to {
         transform: translate(0%,0);
-        opacity: 1;
-    }
-  }
-  @keyframes fromRight {
-    from {
-        transform: translate(150%,0);
-        opacity: 0;
-    }
-    to {
-        transform: translate(0%,0);
-        opacity: 1;
-    }
-  }
-  @keyframes fromDown {
-    from {
-        transform: translate(0,100%);
-        opacity: 0;
-    }
-    to {
-        transform: translate(0%,0);
-        opacity: 1;
-    }
-  }
-  @keyframes visibleOp {
-    from {
-        opacity: 0;
-    }
-    to {
         opacity: 1;
     }
   }
