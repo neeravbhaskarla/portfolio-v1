@@ -19,7 +19,7 @@ const LoaderComponent = () =>{
   },[counter])
   return(
     <div className="loader-component">
-      <h1>{counter}</h1>
+      <h1>{counter}%</h1>
     </div>
   )
 }
