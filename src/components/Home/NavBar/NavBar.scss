@@ -1,5 +1,4 @@
 .navbar{
-    // font-family: 'Inter';
     box-sizing: border-box;
     padding: 30px 30px 40px;
     width: 100%;
@@ -20,8 +19,9 @@
             flex-direction: column;
             align-items: center;
             &>span{
-                margin-left: 40px;
-                font-size: 1.6rem;
+                font-family: 'Inter';
+                margin-left: 20px;
+                font-size: 1.5rem;
                 font-weight: 600;
                 transform: rotate(0deg);
                 transition: transform 800ms;

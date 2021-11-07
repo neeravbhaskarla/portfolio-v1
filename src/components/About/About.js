@@ -17,7 +17,7 @@ export default function About() {
 
                 <br/>
                 <br/>
-                <span>I like to perform design and develop new websites. Proficient in Java, C#, Python, Javascript, SQL, React. Recently graduated in 2021 and Currently Looking for a Job.</span>
+                <span>I like to perform design and develop new websites. Proficient in Java, C#, Python, Javascript, SQL, React. Recently graduated in 2021 and currently looking for a job.</span>
             </div>
         </div>
     )

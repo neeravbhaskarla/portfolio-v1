@@ -4,7 +4,9 @@ import Model from './Model'
 import './Main.scss'
 
 
-const roles = ['Web Developer & UX Designer', 'Software Developer / Engineer', 'Data Analyst / Scientist']
+// const roles = ['Web Developer & UX Designer', 'Software Developer / Engineer', 'Data Analyst / Scientist']
+const roles = ['Web Developer & UX Designer', 'Software Developer / Engineer', 'Data Analyst', 'Blockchain Developer']
+
 export default function Main() {
     const [role, setRole, ref] = useState(roles[0])
     const sleep = (value) => {

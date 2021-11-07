@@ -1,65 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 31vh;
     a{
         text-decoration: none;
     }
     &-top{
-        width: 100%;
-        height: 22vh;
-        background-color: black;
         &-links{
             display: flex;
             flex-direction: row;
-            height: 100%; // unnessecary?
-            align-items: center;
-            justify-content: space-between;
-            &-left{
-                margin-left: 20px;
+            justify-content: center;
+            &-items{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                width: 250px;
-                .LinkedIn, .Github{
+                width: 75%;
+                margin-top: 20px;
+                .LinkedIn, .Github, .Email{
                     &>a{
-                        font-weight: 600;
-                        color: rgb(136, 136, 136);
-                        font-size: 1.3rem;
+                        font-family: 'Oswald';
+                        font-weight: bolder;
+                        color: transparent;
+                        -webkit-text-stroke: 1px rgb(120, 120, 120);
+                        font-size: 3rem;
+                        letter-spacing: 0.4rem;
+                        transition: color 0.4s ease;
+                        &:hover{
+                            color: rgb(120, 120, 120);
+                        }
                     }
                 }
-            }
-            &-right{
-                margin-right:40px;
-                .contact-mail{
-                    &>span{
-                        color: rgb(160, 160, 160);
-                        font-weight: 600;
-                    }
-                }
-                .contact-mailId{
-                    margin-top: 8px;
-                    a{
-                        color: rgb(124, 124, 124);
-                        font-size: 0.8rem;
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-    &-bottom{
-        width: 100%;
-        height: 4vh;
-        background-color: #131313;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .copyright{
-            &>span{
-                font-family: 'Poppins';
-                font-weight: 500;
-                margin-left: 20px;
-                font-size: 0.6rem;
-                color: rgb(156, 156, 156);
             }
         }
     }
