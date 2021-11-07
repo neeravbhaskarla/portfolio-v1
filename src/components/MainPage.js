@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useRef, useState, Suspense} from 'react'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Home from './Home/Home'
@@ -6,7 +6,6 @@ import NavBar from './Home/NavBar/NavBar'
 import Projects from './Projects/Projects'
 import './MainPage.scss'
 import useLocoScroll from '../hooks/useLocoScroll'
-import { Suspense } from 'react/cjs/react.production.min'
 
 const LoaderComponent = () =>{
   const [counter, setCounter] = useState(0)
@@ -15,7 +14,7 @@ const LoaderComponent = () =>{
                     if(counter!==100){
                       setCounter(counter+1)
                     }
-                  },28)
+                  },10)
     return ()=> clearTimeout(timer)
   },[counter])
   return(
@@ -40,7 +39,7 @@ export default function MainPage() {
     }
   }, [preloader]);
 
-  const [timer, setTimer] = useState(4);
+  const [timer, setTimer] = useState(2);
 
   const id = useRef(null);
 

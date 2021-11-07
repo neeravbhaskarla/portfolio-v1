@@ -11,7 +11,7 @@ export default function Project2() {
                             <span>Application</span>
                         </div>
                         <div className="project2-image2" >
-                            <img src={P2Image2} alt="" data-scroll/>
+                            <a href='https://chat-application-a41a4.web.app' rel="noreferrer" target='_blank'><img src={P2Image2} alt="" data-scroll/></a>
                         </div>
                 </div>
             </div>

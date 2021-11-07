@@ -14,10 +14,10 @@ export default function Project1() {
                             <span>W E B S I T E</span>
                         </div>
                         <div className="project1-image1">
-                            <img src={P1Image1} alt="" data-scroll/>
+                            <a href="https://e-commerce-app-2e624.web.app/" rel="noreferrer" target='_blank'><img src={P1Image1} alt="" data-scroll/></a>
                         </div>
                         <div className="project1-image2">
-                            <img src={P1Image2} alt="" data-scroll/>
+                            <a href="https://e-commerce-app-2e624.web.app/" rel="noreferrer" target='_blank'><img src={P1Image2} alt="" data-scroll/></a>
                         </div>
                 </div>
             </div>

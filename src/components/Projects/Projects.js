@@ -22,7 +22,6 @@ export default function Projects() {
               scroller: "#main-container",
               pin: true,
               scrub: 0.5,
-              snap: 1 / (sections.length - 1),
               end: () => `+=${ref.current.offsetWidth}`,
             },
           });
