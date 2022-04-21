@@ -2,10 +2,11 @@ import React, { Suspense, useEffect } from 'react'
 import useState from 'react-usestateref'
 import Model from './Model'
 import './Main.scss'
+import { isMobile } from 'react-device-detect'
 
 
 // const roles = ['Web Developer & UX Designer', 'Software Developer / Engineer', 'Data Analyst / Scientist']
-const roles = ['Web Developer & UX Designer', 'Software Developer / Engineer', 'Data Analyst', 'Blockchain Developer']
+const roles = ['Web Developer', 'UX Designer', 'Software Developer', 'Blockchain Developer']
 
 export default function Main() {
     const [role, setRole, ref] = useState(roles[0])
@@ -42,7 +43,7 @@ export default function Main() {
                         </div>
                     </div>
                     <div className="main-left-roles">
-                        <span>I am a {role}</span> 
+                        <p>I am a {isMobile?<br/>:null}<span>{role}</span></p> 
                     </div>
                 </div>
                 <div className="main-right">

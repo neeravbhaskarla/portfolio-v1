@@ -69,7 +69,7 @@ export default function MainPage() {
       {preloader?<LoaderComponent/>:
       <Suspense fallback={null}>
             <div 
-              id="main-container" 
+              id="main-container"  
               data-scroll-container
               ref={ref}>
                   <NavBar/>

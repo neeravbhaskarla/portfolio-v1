@@ -48,3 +48,61 @@
         }
     }
 }
+@media (max-width: 480px) {
+    .project2{
+        display: flex;
+        // height: 100%;
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        img{
+            border-radius: 10px;
+        }
+        &-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        &-name{
+            position: absolute;
+            z-index: 1;
+            top: 140%;
+            left: 8%;
+            &>h6{
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 1px;
+                color: white;
+    
+            }
+            &>span{
+                font-family: 'Poppins';
+                font-size: 0.8rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                color: white;
+                letter-spacing: 0.3em;
+                -webkit-text-stroke: 0px rgb(163, 163, 163);
+            }
+        }
+        &-image2{
+            z-index: 99;
+            position: absolute;
+            top: 151%;
+            padding-left: 31px;
+            display: block;
+            img{
+                transform: scale(1);
+                transition: transform 1s;
+                &:hover{
+                    transform: scale(1);
+                }
+                z-index: 0;
+                width: 450px;
+                height: 30vh;
+            }
+        }
+    }
+    
+}

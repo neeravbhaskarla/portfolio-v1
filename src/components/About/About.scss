@@ -1,4 +1,5 @@
 .about{
+    background-color: white;
     height: 100vh;
     margin: 200px 0px 0px 100px;
     &-heading{
@@ -36,3 +37,40 @@
         }
     }
 }
+
+@media (max-width: 480px){
+    .about{
+        height: 100vh;
+        margin: 200px 0px 0px 30px;
+        &-heading{
+            &>span{
+                font-size: 2rem;
+                font-weight: 800;
+            }
+            &.is-reveal{
+                opacity: 1;
+                transform: translateY(0%);
+                clip-path: inset(0% 0% 0% 0%);
+            }
+        }
+        &-info{
+            margin-top: 30px;
+            width: 90%;
+            opacity: 0;
+            clip-path: inset(100% 0% 0% 0%);
+            transform: translateY(100%);
+            transition: all 1s cubic-bezier(0.77, 0, 0.175, 1),;
+            &>span{
+                letter-spacing: 0.05em;
+                font-size: 0.7rem;
+            }
+    
+            &.is-reveal{
+                opacity: 1;
+                transform: translateY(0%);
+                clip-path: inset(0% 0% 0% 0%);
+            }
+        }
+    }
+}
+    

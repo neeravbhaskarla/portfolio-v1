@@ -1,4 +1,5 @@
 .main{
+    background-color: white;
     &-container{
         display: flex;
         flex-direction: row;
@@ -10,9 +11,9 @@
         padding-left: 150px;
         animation: fromLeft 2s;
         &-roles{
-            color: #636363;
+            color: #555555;
             padding: 0;
-            margin: 0;
+            margin-left: 3px;
             font-size: 1rem;
             font-weight: 600;
         }
@@ -22,8 +23,8 @@
                 padding: 0;
                 margin: 0;
                 &>span{
-                    font-size: 5.2rem;
-                    font-weight: 500;
+                    font-size: 4.5rem;
+                    font-weight: 600;
                 }
             }
             &-last{
@@ -47,3 +48,34 @@
         opacity: 1;
     }
   }
+@media (max-width: 480px) {
+    .main{
+        &-container{
+            display: flex;
+        }
+        &-left{
+            width: 100vw;
+            padding-left: 30px;
+            &-roles{
+                color: #3b3b3b;
+                padding: 130px 0 0 0;
+                margin: 0;
+                font-size: 1.6rem;
+                font-weight: 700;
+                p{
+                    span{
+                        font-size: 1.8rem;
+                        font-weight: bolder;
+                        margin-top: 100px;
+                    }
+                }
+            }
+            &-name{
+                display: none;
+            }
+        }
+        &-right{
+            display: none;
+        }
+    }
+}

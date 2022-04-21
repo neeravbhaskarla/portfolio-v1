@@ -17,3 +17,12 @@
     -webkit-text-stroke: 10px rgb(212, 212, 212);
     letter-spacing: -0.5rem;
 }
+@media (max-width: 480px) {
+    .loader-component{
+        font-size: 1rem;
+        -webkit-text-stroke: 0px rgb(212, 212, 212);
+        color: white;
+        letter-spacing: 0rem;
+        background-color: black;
+    }
+}
