@@ -130,9 +130,8 @@
         &-wrapper{
             display: flex;
             flex-direction: column;
-            grid-gap: 0%;
-            align-items: center;
-            justify-content: center;
+            width: 0vw;
+            justify-content: flex-end;
         }
         &-name1{
         position: absolute;
@@ -162,7 +161,7 @@
     &-name2{
         position: absolute;
         z-index: 1;
-        top: 49%;
+        top: 47%;
         left: 8%;
         &>h6{
             font-size: 1.5rem;
@@ -185,7 +184,7 @@
     &-name3{
         position: absolute;
         z-index: 1;
-        top: 70.6%;
+        top: 70%;
         left: 8%;
         &>h6{
             font-size: 1.5rem;
@@ -208,7 +207,8 @@
     &-image1{
         z-index: 1;
         position: absolute;
-        top: 44%;
+        margin-top: 20px;
+        top: 43.3%;
         left: 8%;
         display: block;
         img{
@@ -217,16 +217,17 @@
             &:hover{
                 transform: scale(1);
             }
-            width: 120%;
-            height: 30% !important;
+            max-width: 83%;
+            height: 23% !important;
             border-radius: 10px;
         }
     }
     &-image2{
         z-index: 1;
         position: absolute;
-        top: 63.5%;
+        top: 60.8%;
         left: 8.4%;
+        margin-top: 20px;
         display: block;
         img{
             transform: scale(1);
@@ -234,16 +235,17 @@
             &:hover{
                 transform: scale(1);
             }
-            width: 60%;
-            height: 45vh !important;
+            max-width: 50%;
+            height: 40vh !important;
             border-radius: 10px;
         }
     }
     &-image3{
         z-index: 1;
         position: absolute;
-        top: 85%;
+        top: 84%;
         left: 8.4%;
+        margin-top: 20px;
         display: block;
         img{
             transform: scale(1);
@@ -251,8 +253,8 @@
             &:hover{
                 transform: scale(1);
             }
-            width: 160%;
-            height: 30vh !important;
+            max-width: 110%;
+            height: 21vh !important;
             border-radius: 10px;
         }
     }
@@ -268,10 +270,9 @@
         width: 100vw;
         &-wrapper{
             display: flex;
-            flex-direction: column;
-            grid-gap: 0%;
-            align-items: center;
-            justify-content: center;
+            flex-direction: row;
+            width: 0vw;
+            justify-content: flex-end;
         }
         &-name1{
         position: absolute;
@@ -356,8 +357,8 @@
             &:hover{
                 transform: scale(1);
             }
-            width: 120%;
-            height: 30% !important;
+            max-width: 90%;
+            height: 28% !important;
             border-radius: 10px;
         }
     }
@@ -373,7 +374,6 @@
             &:hover{
                 transform: scale(1);
             }
-            width: 60%;
             height: 45vh !important;
             border-radius: 10px;
         }
@@ -390,8 +390,7 @@
             &:hover{
                 transform: scale(1);
             }
-            width: 160%;
-            height: 30vh !important;
+            height: 25vh !important;
             border-radius: 10px;
         }
     }
