@@ -115,6 +115,7 @@
                 display: none;
             }
             &-image2{
+                z-index: 99;
                 top: 15%;
                 left: 0%;
                 margin-left: 0px;
@@ -125,7 +126,7 @@
                 padding-left: 0px;
                 display: block;
                 img{
-                    z-index: 0;
+                    z-index: 1;
                     max-width: 130%;
                     height: 100%;
                 }
