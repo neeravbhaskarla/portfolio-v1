@@ -13,11 +13,11 @@ export default function About() {
                 <span>A B O U T</span>
             </div>
             <div className={cn("about-info", { "is-reveal": onScreen })} data-scroll>
-                <span>My name is Neerav, a passionate self-taught web developer and a freelance software engineer from India. </span>
+                <span>My name is Neerav, a passionate self-taught web developer from India. </span>
 
                 <br/>
                 <br/>
-                <span>I like to perform design and develop new websites. Proficient in Java, C#, Python, Javascript, SQL, React. Recently graduated in 2021 and currently looking for a job.</span>
+                <span>I like to perform design and develop new websites. Proficient and have a solid knowledge of Data Structures & Algorithms, Object-Oriented Programming and Web application development. Having the ability to work with various programming languages, including Java, Python, HTML5, CSS3 and JavaScript and Frontend and Backend frameworks.</span>
             </div>
         </div>
     )
