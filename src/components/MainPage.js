@@ -43,7 +43,7 @@ export default function MainPage() {
   useEffect(()=>{
     gsap.to(loaderRef.current, {
       y: -window.innerHeight*1.5,
-      duration: 2,
+      duration: 1.5,
       delay: 1
     })
   }, [])
