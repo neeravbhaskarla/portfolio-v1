@@ -17,7 +17,10 @@ export default function About() {
 
                 <br/>
                 <br/>
-                <span>I like to perform design and develop new websites. Proficient and have a solid knowledge of Data Structures & Algorithms, Object-Oriented Programming and Web application development. Having the ability to work with various programming languages, including Java, Python, HTML5, CSS3 and JavaScript and Frontend and Backend frameworks.</span>
+                <span>I like to perform design and develop new websites. Proficient and have a solid knowledge of Data Structures & Algorithms, Object-Oriented Programming and Full Stack Web application development.</span>
+                <br/> 
+                <br/> 
+                <span>Experience with working on programming languages such as Java, Python and different Frontend & Backend Frameworks.</span>
             </div>
         </div>
     )

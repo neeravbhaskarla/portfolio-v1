@@ -6,7 +6,7 @@ import { isMobile } from 'react-device-detect'
 
 
 // const roles = ['Web Developer & UX Designer', 'Software Developer / Engineer', 'Data Analyst / Scientist']
-const roles = ['Web Developer', 'UX Designer', 'Software Developer', 'Blockchain Developer']
+const roles = ['Software Developer', 'Blockchain Developer', 'UX Designer', '3D Artist', ]
 
 export default function Main() {
     const [role, setRole, ref] = useState(roles[0])

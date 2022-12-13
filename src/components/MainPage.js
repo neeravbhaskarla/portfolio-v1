@@ -6,6 +6,7 @@ import NavBar from './Home/NavBar/NavBar'
 import Projects from './Projects/Projects'
 import './MainPage.scss'
 import useLocoScroll from '../hooks/useLocoScroll'
+import {gsap} from 'gsap'
 
 const LoaderComponent = () =>{
   const [counter, setCounter] = useState(0)
@@ -14,12 +15,12 @@ const LoaderComponent = () =>{
                     if(counter!==100){
                       setCounter(counter+1)
                     }
-                  },10)
+                  },5)
     return ()=> clearTimeout(timer)
   },[counter])
   return(
     <div className="loader-component">
-      <h1>{counter}%</h1>
+      <h1>{counter}</h1>
     </div>
   )
 }
@@ -31,6 +32,7 @@ export default function MainPage() {
 
   useLocoScroll(!preloader);
 
+  const loaderRef = useRef(null);
   useEffect(() => {
     if (!preloader && ref) {
       if (typeof window === "undefined" || !window.document) {
@@ -38,6 +40,13 @@ export default function MainPage() {
       }
     }
   }, [preloader]);
+  useEffect(()=>{
+    gsap.to(loaderRef.current, {
+      y: -window.innerHeight*1.5,
+      duration: 2,
+      delay: 1
+    })
+  }, [])
 
   const [timer, setTimer] = useState(2);
 
@@ -66,7 +75,10 @@ export default function MainPage() {
   }
   return (
     <>
-      {preloader?<LoaderComponent/>:
+      {preloader?
+      <div ref={loaderRef}>
+        <LoaderComponent/>
+      </div>:
       <Suspense fallback={null}>
             <div 
               id="main-container"  
