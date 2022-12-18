@@ -9,7 +9,7 @@
         width: 60%;
         padding-top: 180px;
         padding-left: 150px;
-        animation: fromLeft 2s;
+        animation: vis 2s;
         &-roles{
             color: #555555;
             padding: 0;
@@ -38,13 +38,11 @@
         margin-right: 150px;
     }
 }
-@keyframes fromLeft {
+@keyframes vis {
     from {
-        transform: translate(-100%,0);
         opacity: 0;
     }
     to {
-        transform: translate(0%,0);
         opacity: 1;
     }
   }

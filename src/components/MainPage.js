@@ -76,21 +76,21 @@ export default function MainPage() {
   return (
     <>
       {preloader?
-      <div ref={loaderRef}>
-        <LoaderComponent/>
-      </div>:
-      <Suspense fallback={null}>
-            <div 
-              id="main-container"  
-              data-scroll-container
-              ref={ref}>
-                  <NavBar/>
-                  <Home/>
-                  <Projects/>
-                  <About/>
-                  <Contact/>
-            </div>
-      </Suspense>
+        <div ref={loaderRef}>
+          <LoaderComponent/>
+        </div>:
+        <Suspense fallback={null}>
+              <div 
+                id="main-container"  
+                data-scroll-container
+                ref={ref}>
+                    <NavBar/>
+                    <Home/>
+                    <Projects/>
+                    <About/>
+                    <Contact/>
+              </div>
+        </Suspense>
       }
     </>
   )

@@ -1,0 +1,14 @@
+
+.cursor{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    left: 100%;
+    top: 100%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: scale 0.3s ease-in-out;
+}
