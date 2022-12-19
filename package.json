@@ -25,6 +25,9 @@
     "react-usestateref": "^1.0.5",
     "web-vitals": "^1.1.2"
   },
+  "engines": {
+    "node": "16.4.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
