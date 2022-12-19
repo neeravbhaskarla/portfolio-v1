@@ -41,32 +41,32 @@
             }
         }
     }
-    // &-right{
-    //     width: 50%;
-    //     display: flex;
-    //     margin-top: 5px;
-    //     align-items: center;
-    //     justify-content: flex-end;
-    //     &-projects, &-about, &-contact{
-    //         display: flex;
-    //         flex-direction: row;
-    //         align-items: center;
-    //         margin-right: 100px;
-    //         border-bottom: 2px solid transparent;
-    //         height: 100%;
-    //         &>a{
-    //             color: black;
-    //             text-decoration: none;
-    //             font-size: 1rem;
-    //             font-weight: 600;
-    //         }
-    //         // transition: border 600ms;
-    //         &:hover{
-    //             cursor: pointer;
-    //             // border-bottom: 2px solid rgb(100, 100, 100);
-    //         }
-    //     }
-    // }
+    &-right{
+        width: 50%;
+        display: flex;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: flex-end;
+        &-projects, &-about, &-contact{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 100px;
+            border-bottom: 2px solid transparent;
+            height: 100%;
+            &>a{
+                color: black;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            // transition: border 600ms;
+            &:hover{
+                cursor: pointer;
+                // border-bottom: 2px solid rgb(100, 100, 100);
+            }
+        }
+    }
 }
 
 @keyframes fromUp {

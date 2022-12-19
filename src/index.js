@@ -41,5 +41,5 @@ window.addEventListener("click", ()=>{
         scale: 1
       }
     })
-  }, 500)
+  }, 300)
 })
