@@ -16,7 +16,7 @@ export default function OtherProjects() {
                         </div>
                         <div className="otherprojects-image1">
                             {/* <a href='https://dashboard-task01.herokuapp.com/' rel="noreferrer" target='_blank'><img src={DashboardImg} alt="" className="image1" data-scroll/></a> */}
-                            <a href='dashboard-seven-nu-15.vercel.app' rel="noreferrer" target='_blank'><img src={DashboardImg} alt="" className="image1" data-scroll/></a>
+                            <a href='https://dashboard-seven-nu-15.vercel.app' rel="noreferrer" target='_blank'><img src={DashboardImg} alt="" className="image1" data-scroll/></a>
                         </div>
                     </div>
                 </div>
