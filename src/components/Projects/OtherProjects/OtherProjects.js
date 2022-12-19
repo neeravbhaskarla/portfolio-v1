@@ -16,7 +16,7 @@ export default function OtherProjects() {
                         </div>
                         <div className="otherprojects-image1">
                             {/* <a href='https://dashboard-task01.herokuapp.com/' rel="noreferrer" target='_blank'><img src={DashboardImg} alt="" className="image1" data-scroll/></a> */}
-                            <a href='https://github.com/neeravbhaskarla/dashboard' rel="noreferrer" target='_blank'><img src={DashboardImg} alt="" className="image1" data-scroll/></a>
+                            <a href='dashboard-seven-nu-15.vercel.app' rel="noreferrer" target='_blank'><img src={DashboardImg} alt="" className="image1" data-scroll/></a>
                         </div>
                     </div>
                 </div>
@@ -27,8 +27,7 @@ export default function OtherProjects() {
                             <span>Clone</span>
                         </div>
                         <div className="otherprojects-image2">
-                            {/* <a href='https://cardekho-clone1.herokuapp.com/' rel="noreferrer" target='_blank'><img src={CardekoImg} alt="" className="image2" data-scroll/></a> */}
-                            <a href='https://github.com/neeravbhaskarla/cardekho-clone' rel="noreferrer" target='_blank'><img src={CardekoImg} alt="" className="image2" data-scroll/></a>
+                            <a href='https://cardekho-clone.vercel.app/' rel="noreferrer" target='_blank'><img src={CardekoImg} alt="" className="image2" data-scroll/></a>
                         </div>
                     </div>
                 </div>
@@ -39,8 +38,7 @@ export default function OtherProjects() {
                             <span>Table</span>
                         </div>
                         <div className="otherprojects-image3">
-                            {/* <a href='https://crud-table1.herokuapp.com/' rel="noreferrer" target='_blank'><img src={CRUDTable} alt="" className="image3" data-scroll/></a> */}
-                            <a href='https://github.com/neeravbhaskarla/crud-table' rel="noreferrer" target='_blank'><img src={CRUDTable} alt="" className="image3" data-scroll/></a>
+                            <a href='https://crud-table-seven.vercel.app/' rel="noreferrer" target='_blank'><img src={CRUDTable} alt="" className="image3" data-scroll/></a>
                         </div>
                     </div>
                 </div>
