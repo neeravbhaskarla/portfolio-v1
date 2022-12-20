@@ -84,9 +84,11 @@
     .navbar{
             position: fixed;
             font-weight: 600;
+            z-index: 999;
             mix-blend-mode: difference;
             color: white;
-            z-index: 999;
+            background-color: black;
+            border: 0;
             &-left{
                 width: 50%;
                 &-logo{

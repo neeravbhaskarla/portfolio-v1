@@ -42,7 +42,8 @@
 @media (max-width: 480px){
     .about{
         height: 100vh;
-        margin: 200px 0px 0px 30px;
+        margin: 50px 0px 0px 30px;
+        padding-left: 0px;
         &-heading{
             &>span{
                 font-size: 2rem;
@@ -58,6 +59,8 @@
             margin-top: 30px;
             width: 90%;
             opacity: 0;
+            max-height: 100%;
+            height: fit-content;
             clip-path: inset(100% 0% 0% 0%);
             transform: translateY(100%);
             transition: all 1s cubic-bezier(0.77, 0, 0.175, 1),;
