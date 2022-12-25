@@ -8,7 +8,7 @@
     &-left{
         width: 60%;
         padding-top: 180px;
-        padding-left: 150px;
+        padding-left: 140px;
         animation: vis 2s;
         &-roles{
             color: #555555;
@@ -33,9 +33,8 @@
         }
     }
     &-right{
-        width: 50%;
-        margin-top: 12px;
-        margin-right: 150px;
+        width: 40%;
+        margin-right: 180px;
     }
 }
 @keyframes vis {

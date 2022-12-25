@@ -9,7 +9,7 @@ import { a as web } from '@react-spring/web'
 
 const vec = new THREE.Vector3()
 
-function Laptop({ open, hinge, ...props }) {
+function Laptop({ open, hinge, spring, ...props }) {
   const group = useRef()
 
   const { nodes, materials } = useGLTF('./mac-draco.glb')
@@ -17,7 +17,9 @@ function Laptop({ open, hinge, ...props }) {
   const [hovered, setHovered] = useState(false)
 
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
-
+  useEffect(()=>{
+    group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, 2, 1)
+  }, [])
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     state.camera.position.lerp(vec.set(0, 0, -28), 0.1)
@@ -26,6 +28,9 @@ function Laptop({ open, hinge, ...props }) {
     group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, open ? Math.sin(t / 4) / 4 : 0, 0.1)
     group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, open ? Math.sin(t / 4) / 4 : 0, 0.1)
     group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, open ? (-2 + Math.sin(t)) / 3 : -4.3, 0.1)
+    if(hovered && !open){
+      group.current.position.y +=0.02
+    }
   })
 
   return (
@@ -54,7 +59,7 @@ function Laptop({ open, hinge, ...props }) {
 
 export default function Model() { 
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
   
   const props = useSpring({ open: Number(open) })
   return (
@@ -63,7 +68,7 @@ export default function Model() {
         <three.pointLight position={[10, 10, 10]} intensity={1.5} />
         <Suspense fallback={null}>
           <group rotation={[0, Math.PI, 0]} onClick={(e) => {e.stopPropagation(); setOpen(!open)}}>
-            <Laptop open={open} hinge={props.open.to([0, 1], [1.575, -0.425])} />
+            <Laptop open={open} hinge={props.open.to([0, 1], [1.575, -0.425])}/>
           </group>
           <Environment preset="city" />
         </Suspense>

@@ -42,8 +42,8 @@ export default function MainPage() {
   }, [preloader]);
   useEffect(()=>{
     gsap.to(loaderRef.current, {
-      y: -window.innerHeight*1.5,
-      duration: 1.5,
+      y: window.innerHeight*1.5,
+      duration: 2,
       delay: 1
     })
   }, [])
