@@ -1,3 +1,52 @@
+.navbar{
+    display: none;
+    box-sizing: border-box;
+    padding: 30px 50px 40px;
+    width: 100%;
+    animation: appear 1s;
+    background-color: white;
+    .logo{
+        font-weight: 400;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:480px){
+    .navbar{
+            display: block;
+            margin-left: -20px;
+            position: fixed;
+            font-weight: 600;
+            z-index: 999;
+            mix-blend-mode: difference;
+            color: white;
+            background-color: black;
+            border: 0;
+            &-left{
+                width: 100%;
+                &-logo{
+                    &>h3{
+                        font-size: 1rem;
+                        font-weight: 800;
+                        &:hover, &:active{
+                            cursor: none;
+                            transform: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+}
+
 .main{
     background-color: white;
     &-container{
@@ -7,8 +56,8 @@
     }
     &-left{
         width: 60%;
-        padding-top: 180px;
-        padding-left: 140px;
+        padding-top: 220px;
+        padding-left: 110px;
         animation: vis 2s;
         &-roles{
             color: #555555;
@@ -34,7 +83,7 @@
     }
     &-right{
         width: 40%;
-        margin-right: 180px;
+        margin-right: 90px;
     }
 }
 @keyframes vis {

@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState, Suspense} from 'react'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Home from './Home/Home'
-import NavBar from './Home/NavBar/NavBar'
 import Projects from './Projects/Projects'
 import './MainPage.scss'
 import useLocoScroll from '../hooks/useLocoScroll'
@@ -84,7 +83,6 @@ export default function MainPage() {
                 id="main-container"  
                 data-scroll-container
                 ref={ref}>
-                    <NavBar/>
                     <Home/>
                     <Projects/>
                     <About/>

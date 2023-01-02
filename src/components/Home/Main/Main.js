@@ -31,27 +31,38 @@ export default function Main() {
     });
 
     return (
-        <div className="main">
-            <div className="main-container">
-                <div className="main-left">
-                    <div className="main-left-name">
-                        <div className="main-left-name-first">
-                            <span>Neerav</span>
-                        </div>
-                        <div className="main-left-name-last">
-                            <span>Bhaskarla</span>
+        <>
+            <div className='navbar'>
+                <div className="navbar-container">
+                    <div className="navbar-left">
+                        <div className="navbar-left-logo">
+                            {!isMobile?<h3 className='logo'>NB</h3>:<h3 className='name'>Neerav Bhaskarla</h3>}
                         </div>
                     </div>
-                    <div className="main-left-roles">
-                        <p>I am a {isMobile?<br/>:null}<span>{role}</span></p> 
-                    </div>
-                </div>
-                <div className="main-right">
-                    <Suspense fallback={null}>
-                        <Model/>
-                    </Suspense>
                 </div>
             </div>
-        </div>
+            <div className="main">
+                <div className="main-container">
+                    <div className="main-left">
+                        <div className="main-left-name">
+                            <div className="main-left-name-first">
+                                <span>Neerav</span>
+                            </div>
+                            <div className="main-left-name-last">
+                                <span>Bhaskarla</span>
+                            </div>
+                        </div>
+                        <div className="main-left-roles">
+                            <p>I am a {isMobile?<br/>:null}<span>{role}</span></p> 
+                        </div>
+                    </div>
+                    <div className="main-right">
+                        <Suspense fallback={null}>
+                            <Model/>
+                        </Suspense>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
