@@ -56,8 +56,8 @@
     }
     &-left{
         width: 60%;
-        padding-top: 220px;
-        padding-left: 110px;
+        margin-top: 20%;
+        margin-left: 11%;
         animation: vis 2s;
         &-roles{
             color: #555555;
@@ -83,6 +83,7 @@
     }
     &-right{
         width: 40%;
+        margin-top: 5%;
         margin-right: 90px;
     }
 }
